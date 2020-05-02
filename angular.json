@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "shopping-client"
+    }
+  },
+  "defaultProject": "shopping-client",
+  "cli": {
+    "analytics": false
+  }
 }
