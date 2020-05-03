@@ -4,23 +4,23 @@
             <div class="card-body">
                 <h5 class="card-title">Create Vendor</h5>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <form>
+                <form #heroForm="ngForm">
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputEmail4">Name</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="">
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="" [(ngModel)]="vendorModel.name" name="name">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputEmail4">Phone</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="">
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="" [(ngModel)]="vendorModel.phone" name="phone">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="" [(ngModel)]="vendorModel.email" name="email">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputEmail4">Plan</label>
-                            <select id="inputState" class="form-control custom-select">
+                            <select id="inputState" class="form-control custom-select" [(ngModel)]="vendorModel.planId" name="planId">
                                 <option selected="">Choose...</option>
                                 <option>Basic</option>
                                 <option>Silver</option>
@@ -28,25 +28,25 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputEmail4">Website URL</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="" [(ngModel)]="vendorModel.websiteUrl" name="websiteUrl">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputEmail4">Uniqe ID</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder=""  [(ngModel)]="vendorModel.uniqueKey" name="uniqueKey">
                         </div>
 
                         <div class="form-group col-md-3">
                             <label for="inputEmail4">Upload Logo</label>
-                            <input type="File" class="form-control" id="inputEmail4" placeholder="">
+                            <input type="File" class="form-control" id="inputEmail4" placeholder="" [(ngModel)]="vendorModel.logoImg" name="logoImg">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputEmail4">Choose theme Color</label>
-                            <input type="color" class="form-control" id="inputEmail4" placeholder="">
+                            <input type="color" class="form-control" id="inputEmail4" placeholder="" [(ngModel)]="vendorModel.themeColor" name="themeColor">
                         </div>
 
                     </div>
 
-                    <button type="submit" class="btn btn-primary float-right">Submit </button>
+                    <button (click)="submitAddVendorForm()" class="btn btn-primary float-right">Submit </button>
                     <button type="submit" class="btn btn-secondary float-right mr-3">Clear</button>
                 </form>
             </div>

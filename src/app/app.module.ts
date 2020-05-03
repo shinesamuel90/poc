@@ -14,6 +14,7 @@ import { VendorListComponent } from './components/dashboard/body/vendor-list/ven
 import { FeaturesListComponent } from './components/dashboard/body/features-list/features-list.component';
 import { PlanListComponent } from './components/dashboard/body/plan-list/plan-list.component';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
