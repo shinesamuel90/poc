@@ -13,6 +13,7 @@ import { AddFeatureComponent } from './components/dashboard/forms/add-feature/ad
 import { VendorListComponent } from './components/dashboard/body/vendor-list/vendor-list.component';
 import { FeaturesListComponent } from './components/dashboard/body/features-list/features-list.component';
 import { PlanListComponent } from './components/dashboard/body/plan-list/plan-list.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { PlanListComponent } from './components/dashboard/body/plan-list/plan-li
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
