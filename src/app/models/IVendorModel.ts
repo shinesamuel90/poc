@@ -1,4 +1,5 @@
 export interface VendorModel {
+  id:number;
   name: string;
   phone: string;
   email: string;
@@ -8,8 +9,8 @@ export interface VendorModel {
   uniqueKey: string;
   merchantKey: string;
   address: string;
-  logoUrl: string;
-  themeLogoUrl: string;
-  logoImg:string;
   themeColor:string;
+  logoImg:[];
+  statusId:number;
+  selected:boolean;
 }

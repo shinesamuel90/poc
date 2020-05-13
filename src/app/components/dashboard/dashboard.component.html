@@ -25,9 +25,9 @@
 
 
     <!-- Theme Styles -->
-    <!-- <link href="assets/css/connect.min.css" rel="stylesheet">
-        <link href="assets/css/dark_theme.css" rel="stylesheet">
-        <link href="assets/css/custom.css" rel="stylesheet"> -->
+    <!-- <link href="../../../assets/css/connect.min.css" rel="stylesheet"> -->
+        <!-- <link href="../../../assets/css/dark_theme.css" rel="stylesheet">
+        <link href="../../../assets/css/custom.css" rel="stylesheet"> -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,25 +38,29 @@
 </head>
 
 <body>
-    <!-- <div class='loader'>
+     <div class='loader'>
         <div class='spinner-grow text-primary' role='status'>
             <span class='sr-only'>Loading...</span>
         </div>
-    </div> -->
+    </div> 
     <div class="connect-container align-content-stretch d-flex flex-wrap">
         <app-sidebar></app-sidebar>
         <div class="page-container">
             <app-header></app-header>
             <div class="page-content">
                 <div class="page-info">
+
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Admin</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                         </ol>
                     </nav>
+
                     <div class="page-options">
-                        <a routerLink="/dashboard/add-vendor" [hidden]="toggleAddVendorBtn" ng-model="toggleAddVendorBtn" href="#" class="btn btn-primary" id="addVendor">Add a Vendor</a>
+                        <a routerLink="/dashboard/add-vendor" [hidden]="toggleAddVendorBtn"
+                            ng-model="toggleAddVendorBtn" href="#" class="btn btn-primary" id="addVendor">Add a
+                            Vendor</a>
                     </div>
 
                 </div>
@@ -69,9 +73,7 @@
     </div>
 
     <!-- Javascripts -->
-    <script src="../../../assets/plugins/jquery/jquery-3.4.1.min.js"></script>
-    <script src="../../../assets/plugins/bootstrap/popper.min.js"></script>
-    <script src="../../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    
     <script src="../../../assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
     <script src="../../../assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
     <script src="../../../assets/plugins/blockui/jquery.blockUI.js"></script>
@@ -80,10 +82,9 @@
     <script src="../../../assets/plugins/flot/jquery.flot.symbol.min.js"></script>
     <script src="../../../assets/plugins/flot/jquery.flot.resize.min.js"></script>
     <script src="../../../assets/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="../../../assets/js/connect.min.js"></script>
+    <!-- <script src="../../../assets/js/connect.min.js"></script> -->
     <script src="../../../assets/js/pages/dashboard.js"></script>
-
-
+    <script src="../../../assets/plugins/select2/js/select2.full.min.js"></script>
 
     <script>
         $('#addVendor').click(function () {
@@ -91,5 +92,4 @@
             $('#addVendor').addClass('d-none');
         })     </script>
 </body>
-
 </html>

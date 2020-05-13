@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+// regular style toast 
+@import '~ngx-toastr/toastr';
+
+@import  "assets/css/dark_theme.css";
+
+@import "assets/plugins/select2/css/select2.min.css";
 
 body,
 html {
@@ -4387,3 +4393,4 @@ tr.group {
         z-index: 100
     }
 }
+

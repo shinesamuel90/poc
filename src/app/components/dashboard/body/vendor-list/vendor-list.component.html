@@ -12,7 +12,7 @@
                         <tr>
                             <th scope="col">
                                 <div class="custom-control custom-checkbox form-group">
-                                    <input type="checkbox" class="custom-control-input" id="mail1">
+                                    <input type="checkbox" class="custom-control-input" id="mail1" [(ngModel)]="selectedAllChkBox" (change)="selectAllVendors();">
                                     <label class="custom-control-label" for="mail1"></label>
                                 </div>
                             </th>
@@ -31,11 +31,11 @@
                         <tr *ngFor="let vendor of vendorsList">
                             <td>
                                 <div class="custom-control custom-checkbox form-group">
-                                    <input type="checkbox" class="custom-control-input" id="mail1">
-                                    <label class="custom-control-label" for="mail1"></label>
+                                    <input type="checkbox" class="custom-control-input" id="{{vendor.id}}" [(ngModel)]="vendor.selected">
+                                    <label class="custom-control-label" for="{{vendor.id}}"></label>
                                 </div>
                             </td>
-                            <th scope="row"><img src="././assets/images/logo.png" width="100"></th>
+                            <th scope="row"><img src="{{baseUrl+vendor.logoImg[0].url}}" width="100"></th>
 
                             <td>{{vendor.name}} <br>
                                 {{vendor.email}}<br>
@@ -43,11 +43,11 @@
                                 {{vendor.domain}}
                             </td>
 
-                            <td>{{vendor.planId}}</td>
+                            <td>{{ findPlan(vendor.planId) }}</td>
 
-                            <td>{{vendor.planId}}</td>
-                            <td>{{vendor.planId}}</td>
-                            <td class="text-success">Active</td>
+                            <td><div class="p-3 mb-2 text-white" [ngStyle]="{'background-color':vendor.themeColor}">{{vendor.themeColor}}</div></td>
+                            <td>{{vendor.uniqueKey}}</td>
+                            <td [ngClass]="{'text-success': vendor.statusId === 1, 'text-danger':vendor.statusId === 2 }">{{findStatus(vendor.statusId)}}</td>
                             <td>
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button"
@@ -56,9 +56,8 @@
                                         Action
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <a class="dropdown-item" (click)="deactivateVendor(vendor)">Activate/De-activate</a>
+                                        <a class="dropdown-item"(click)="deleteVendor(vendor)">Delete</a>
                                     </div>
                                 </div>
                             </td>

@@ -14,8 +14,14 @@ import { VendorListComponent } from './components/dashboard/body/vendor-list/ven
 import { FeaturesListComponent } from './components/dashboard/body/features-list/features-list.component';
 import { PlanListComponent } from './components/dashboard/body/plan-list/plan-list.component';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
-
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+ 
+import { ToastrModule } from 'ngx-toastr';
+import { MustMatchDirective } from './shared/validators/must-match.directive';
+import { ConfirmationDialogComponent } from './shared/dialogs/confirmation-dialog/confirmation-dialog.component';
+import { ConfirmationDialogService } from './shared/dialogs/confirmation-dialog/confirmation-dialog.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,15 +35,22 @@ import {FormsModule} from '@angular/forms';
     AddFeatureComponent,
     VendorListComponent,
     FeaturesListComponent,
-    PlanListComponent
+    PlanListComponent,
+    MustMatchDirective,
+    ConfirmationDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot(),
+     NgbModule
   ],
-  providers: [],
+  providers: [
+    ConfirmationDialogService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
