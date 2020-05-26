@@ -30,7 +30,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -127,6 +129,8 @@
   },
   "defaultProject": "shopping-client",
   "cli": {
-    "analytics": "612deb52-85e1-4707-b84f-484554575815"
+
+    "analytics": false
+
   }
 }
